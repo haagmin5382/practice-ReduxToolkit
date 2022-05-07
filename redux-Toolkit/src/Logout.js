@@ -1,22 +1,19 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
 import { login } from "./redux/user";
-
-function Login() {
-  const user = useSelector((state) => state);
+const Logout = () => {
   const dispatch = useDispatch();
   return (
     <div>
       <button
         onClick={() => {
-          dispatch(login({ name: "haagmin", age: 27 }));
+          dispatch(login({ name: "로그인해주세요", age: 0 }));
         }}
       >
-        Login
+        Logout
       </button>
     </div>
   );
-}
+};
 
-export default Login;
+export default Logout;
